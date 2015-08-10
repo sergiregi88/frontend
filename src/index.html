@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="vendor/css/vendor.min.css">
+</head>
+<body ng-app="lapinedaweb">
+<!-- NAVIGATION -->
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="navbar-header">
+        <a class="navbar-brand" ui-sref="#">AngularUI Router</a>
+    </div>
+    <ul class="nav navbar-nav">
+        <li><a ui-sref="home">Home</a></li>
+        <li><a ui-sref="about">Aboaut</a></li>
+    </ul>
+</nav>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+
+    <!-- THIS IS WHERE WE WILL INJECT OUR CONTENT ============================== -->
+    <div ui-view></div>
+
+</div>
+
+
+
+	<script src="vendor/js/vendor.min.js"/></script>
+	<script src="js/app.js"/></script>
+
+	<script src="components/_common/router.js"/></script>
+	<script src="components/_common/config.js"/></script>
+
+	<script src="components/_common/interceptor.js"/></script>
+
+	<script src='components/token/tokenFactory.js'></script>
+	<script src="components/auth/authFactory.js"/></script>
+	<script src="components/auth/authCtrl.js"/></script>
+		<script src="components/auth/accountCtrl.js"/></script>
+	<script src="components/init/initCtrl.js"/></script>
+	<script src="components/auth/accountCtrl.js"/></script>
+
+
+
+</body>
+</html>

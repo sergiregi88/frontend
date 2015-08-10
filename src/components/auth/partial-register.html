@@ -1,0 +1,76 @@
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			<div class="panel panel-default">
+				<div class="panel-heading">Register</div>
+				<div class="panel-body">
+					<!--@if (count($errors) > 0)
+						<div class="alert alert-danger">
+							<strong>Whoops!</strong> There were some problems with your input.<br><br>
+							<ul>
+								@foreach ($errors->all() as $error)
+									<li>{{ $error }}</li>
+								@endforeach
+							</ul>
+						</div>
+					@endif-->
+
+
+					<div class="alert alert-{{vm.result}}" ng-bind-html="vm.message"></div>
+
+					<form class="form-horizontal" no-validate role="form"  >
+						<div class="form-group">
+							<label class="col-md-4 control-label">Name</label>
+							<div class="col-md-6">
+								<input type="text" ng-model="vm.registerData.name" class="form-control" name="password">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-4 control-label">Username</label>
+							<div class="col-md-6">
+								<input type="text" class="form-control" ng-model="vm.registerData.username" name="login" >
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-4 control-label">Email</label>
+							<div class="col-md-6">
+								<input type="email" ng-model="vm.registerData.email" class="form-control" name="email">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-4 control-label">Password</label>
+							<div class="col-md-6">
+								<input type="password" ng-model="vm.registerData.password" class="form-control" name="password">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-4 control-label">Password Confirm</label>
+							<div class="col-md-6">
+								<input type="password" ng-model="vm.registerData.password_confirmation" class="form-control" name="password_confirmation">
+							</div>
+						</div>
+
+					<!-- 	<div class="form-group">
+							<div class="col-md-6 col-md-offset-4">
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" ng-model="vm.loginData.remember" name="remember"> Remember Me
+									</label>
+								</div>
+							</div>
+						</div> -->
+
+						<div class="form-group">
+							<div class="col-md-6 col-md-offset-4">
+								<button ng-click="vm.register()" class="btn btn-primary">Register</button>
+
+								Are you have an account yet?<a ui-sref="login" class="btn btn-link"  >Go Login</a>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
